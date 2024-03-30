@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Inspiration Tab",
+    "name": "Random Quotes",
     "version": "1.0",
     "description": "A browser extension that displays random inspirational quotes.",
     "action": {
