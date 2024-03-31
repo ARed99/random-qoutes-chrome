@@ -52,6 +52,8 @@ function copyToClipboard(text) {
       console.error('Failed to copy text to clipboard');
     } else {
       console.log('Text copied to clipboard:', text);
+      quoteText.style.color = "green"
+      quoteText.textContent = "Text copied to clipboard!"
     }
   } catch (err) {
     console.error('Unable to copy text:', err);
@@ -61,7 +63,11 @@ function copyToClipboard(text) {
   }
 }
 
-
+CopyQuoteBtn.addEventListener('click', ()=> {
+  if(quoteText.textContent != "") {
+    copyTextFromElement("quoteText")
+  }
+})
 
 newQuoteBtn.addEventListener('click', fetchQuote);
 
