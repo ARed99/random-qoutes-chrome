@@ -5,6 +5,7 @@ async function fetchQuote() {
   try {
     const response = await fetch('https://api.quotable.io/random');
     const data = await response.json();
+    quoteText.style.color = "black"
     quoteText.textContent = data.content + ' - ' + data.author;
   } catch (error) {
     console.error('Error fetching quote:', error);
@@ -53,6 +54,7 @@ function copyToClipboard(text) {
     } else {
       console.log('Text copied to clipboard:', text);
       quoteText.style.color = "green"
+      quoteText.style.textAlign = "center"
       quoteText.textContent = "Text copied to clipboard!"
     }
   } catch (err) {
