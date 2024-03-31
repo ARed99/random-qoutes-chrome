@@ -7,7 +7,7 @@ async function fetchQuote() {
     const data = await response.json();
     quoteText.style.color = "black"
     quoteText.style.textAlign = "justify"
-    quoteText.textContent = data.content + ' - ' + data.author;
+    quoteText.innerHTML = data.content + "<br><br>" + ' - ' + data.author;
   } catch (error) {
     console.error('Error fetching quote:', error);
     quoteText.textContent = 'Failed to fetch quote. Please try again later.';
