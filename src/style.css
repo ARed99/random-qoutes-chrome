@@ -30,3 +30,12 @@ body {
   cursor: pointer;
   margin: 20px;
 }
+#CopyQuoteBtn {
+  padding: 10px 20px;
+  background-color: #06711c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
