@@ -12,6 +12,24 @@ async function fetchQuote() {
   }
 }
 
+
+function copyTextFromElement(elementId) {
+  // Get the HTML element by its ID
+  const element = document.getElementById(elementId);
+  
+  // Check if the element exists
+  if (!element) {
+    console.error('Element with ID ' + elementId + ' not found');
+    return;
+  }
+  
+  // Get the text content of the element
+  const text = element.textContent;
+  
+  // Copy the text to the clipboard
+  copyToClipboard(text);
+}
+
 function copyToClipboard(text) {
   // Create a temporary textarea element
   const textarea = document.createElement('textarea');
@@ -42,6 +60,8 @@ function copyToClipboard(text) {
     document.body.removeChild(textarea);
   }
 }
+
+
 
 newQuoteBtn.addEventListener('click', fetchQuote);
 
