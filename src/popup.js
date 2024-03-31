@@ -1,6 +1,6 @@
 const quoteText = document.getElementById('quoteText');
 const newQuoteBtn = document.getElementById('newQuoteBtn');
-
+const CopyQuoteBtn = document.getElementById('CopyQuoteBtn');
 async function fetchQuote() {
   try {
     const response = await fetch('https://api.quotable.io/random');
