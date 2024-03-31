@@ -6,6 +6,7 @@ async function fetchQuote() {
     const response = await fetch('https://api.quotable.io/random');
     const data = await response.json();
     quoteText.style.color = "black"
+    quoteText.style.textAlign = "justify"
     quoteText.textContent = data.content + ' - ' + data.author;
   } catch (error) {
     console.error('Error fetching quote:', error);
